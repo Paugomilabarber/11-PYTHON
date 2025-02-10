@@ -19,5 +19,7 @@ llista = convertir_a_llista(entrada_usuari)
 resultat = combinar_digits_base10(llista)
 print("Número en base 10:", resultat)
 llista_digitos = list(map(int, entrada.split()))
+
 numero = passar_a_numero(llista_digitos)
+
 print("El número formado es:", numero)
