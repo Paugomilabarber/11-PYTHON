@@ -4,9 +4,9 @@ Utilitzar reduce. Ex: [3, 4, 1, 5] correspòn al número 3415. Ex: def Passar_a_
 
 from functools import reduce
 
-def convertir_a_llista(cadena):
+def convertir_a_llista():
     l = []
     a = input("Dime una llista de numeros: ")
     l.append(a)
-    lista = a.split(",")
-    
+    lista = a
+    return lista
