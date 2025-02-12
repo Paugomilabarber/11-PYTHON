@@ -5,8 +5,13 @@ Utilitzar reduce. Ex: [3, 4, 1, 5] correspòn al número 3415. Ex: def Passar_a_
 from functools import reduce
 
 def convertir_a_llista():
-    l = []
-    a = input("Dime una llista de numeros: ")
-    l.append(a)
-    lista = a
-    return lista
+    entrada = input("Introdueix una llista de dígits separats per espais o comes: ")
+    return [int(x) for x in entrada.replace(",", " ").split()]
+
+def passar_a_numero(llista):
+    return reduce(lambda acc, digit: acc * 10 + digit, llista)
+
+# Programa principal
+llista_digits = convertir_a_llista()
+numero = passar_a_numero(llista_digits)
+print("El número corresponent és:", numero)
